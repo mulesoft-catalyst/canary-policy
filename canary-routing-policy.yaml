@@ -1,0 +1,11 @@
+id: Canary Routing
+name: Canary Routing
+description: An API policy for Mule 4 that allows an API proxy to support a canary release strategy by dynamically changing the API implementation to which incoming HTTP requests are routed.
+category: Custom
+type: custom
+resourceLevelSupported: true
+encryptionSupported: false
+standalone: true
+requiredCharacteristics: []
+providedCharacteristics: []
+configuration: []
