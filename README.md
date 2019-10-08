@@ -72,3 +72,31 @@ zipedit(){
 
 zipedit your-downloaded-prozy-zip.3.9.x.zip classes/config.properties
 ```
+
+`config.properties` before the script has run:
+```
+api.name=test-proxy
+api.version=1
+proxy.port=8081
+proxy.path=/hello-world/*
+proxy.responseTimeout=25000
+implementation.host=v1.microservice.mycompany.com
+implementation.port=8081
+implementation.path=/test
+
+```
+
+`config.properties` after the script has run:
+```
+api.name=test-proxy
+api.version=1
+proxy.port=8081
+proxy.path=/hello-world/*
+proxy.responseTimeout=25000
+implementation.host=#[flowVars.host != null ? flowVars.host : 'v1.microservice.mycompany.com']
+implementation.port=8081
+implementation.path=/test
+
+```
+
+If you need to support URI based canary routing, the MEL expression could be changed to the implementation.path property
