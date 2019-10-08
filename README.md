@@ -2,7 +2,7 @@
 A Mule policy that allows a gateway proxy to support a canary release strategy by dynamically changing the API Implementation host.
 
 # A note on API versioning
-This policy has been designed to modify the host an API is routed to. For example instead of going to `microservicev1.mycompany.com` it will send the request to `microservicev2.mycompany.com`. This versioning strategy may not be appropriate for all use cases, in which case this policy can be modified to support URI based versioning.
+This policy has been designed to modify the host an API is routed to. For example instead of going to `v1.microservice.mycompany.com` it will send the request to `v2.microservice.mycompany.com`. This versioning strategy may not be appropriate for all use cases, in which case this policy can be modified to support URI based versioning.
 
 # Canary release strategy
 
