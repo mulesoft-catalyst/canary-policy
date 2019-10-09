@@ -129,5 +129,5 @@ The recommended approach to using this policy is in the following deployment set
 * A proxy for the microservice is deployed pointing to the original microservice as the default host. The proxy has the attached `modify_proxy.sh` ran against it.
 * The new microservice is deployed in an isolated environment with no routing of external traffic to it and is smoke tested
 * The canary_policy is applied to the Proxy API in API Manager with the desired routing mechanism
-* Traffic is monitored through the proxy and when confidence is achieved in the new microservice, the threshold rates are increased and monitored.
-* When full cutover has occurred the original proxy implementation is modified in API Manager to point to the new microservice and the proxy is re-deployed
+* Traffic is monitored through the proxy and when confidence is achieved in the new microservice, the threshold rates are increased in the policy and then monitored.
+* When full cutover has occurred the original proxy implementation is modified in API Manager to point to the new microservice and the proxy is re-deployed and the policy removed
