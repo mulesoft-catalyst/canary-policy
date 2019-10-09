@@ -40,12 +40,22 @@ For example if you want to route based on the value of a header it would be:
 `#[message.inboundProperties.'X-Canary-Value'=='Release1']`
 ***
 
+If you want to route based on a 5% chance of traffic:
+***
+`#[new java.util.Random().nextInt(101) =< 5]`
+***
+
 ### New service MEL expression
 This property is the MEL expression that captures when a particular request should be sent to the newly deployed service.
 
 For example if you want to route based on the value of a header it would be:
 ***
 `#[message.inboundProperties.'X-Canary-Value'=='Release2']`
+***
+
+If you want to route based on a 95% chance of traffic:
+***
+`#[new java.util.Random().nextInt(101) =< 95]`
 ***
 
 ## Host values
