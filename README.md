@@ -4,7 +4,7 @@ A Mule policy that allows a gateway proxy to support a canary release strategy b
 ## Supported versions
 This policy has been tested against the 3.9.X runtime
 
-# A note on API versioning
+## A note on API versioning
 This policy has been designed to modify the host an API is routed to. For example instead of going to `v1.microservice.mycompany.com` it will send the request to `v2.microservice.mycompany.com`. This versioning strategy may not be appropriate for all use cases, in which case this policy can be modified to support URI based versioning.
 
 # Canary release strategy
@@ -37,7 +37,7 @@ This property is the MEL expression that captures when a particular request shou
 
 For example if you want to route based on the value of a header it would be:
 ***
-`#[message.inboundProperties.'X-CanaryHeader'=='Release1']`
+`#[message.inboundProperties.'X-Canary-Value'=='Release1']`
 ***
 
 ### New service MEL expression
@@ -45,7 +45,7 @@ This property is the MEL expression that captures when a particular request shou
 
 For example if you want to route based on the value of a header it would be:
 ***
-`#[message.inboundProperties.'X-CanaryHeader'=='Release2']`
+`#[message.inboundProperties.'X-Canary-Value'=='Release2']`
 ***
 
 ## Host values
@@ -55,6 +55,10 @@ The hostname of the original microservice
 
 ### New Host
 The hostname of the new microservice
+
+# Policy behavior
+
+
 
 
 # Proxy changes to use the policy
