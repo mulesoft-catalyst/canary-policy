@@ -58,7 +58,10 @@ The hostname of the new microservice
 
 # Policy behavior
 
-
+The policy outcome will be one of three results:
+1. The original host expression matches, and traffic is routed to the original host
+2. The new host expression matches, and the traffic is routed to the new host
+3. No matches occur, in which case the default value from the `config.properties` file is used (most likely the original)
 
 
 # Proxy changes to use the policy
