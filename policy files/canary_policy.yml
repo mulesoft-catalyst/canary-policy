@@ -24,7 +24,7 @@ configuration:
   - propertyName: Original_Host
     name: Original_Host
     description: The hostname (no protocol, no port) of the new implementation
-    type: String
+    type: string
     defaultValue: "release1.mulesoft.com"
     optional: false
   - propertyName: New_Service_Mel_Expression
@@ -36,6 +36,6 @@ configuration:
   - propertyName: New_Host
     name: New_Host
     description: The hostname (no protocol, no port) of the new implementation
-    type: String
+    type: string
     defaultValue: "release2.mulesoft.com"
     optional: false
